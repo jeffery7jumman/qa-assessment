@@ -5,6 +5,7 @@ import './AlbumPage.css'; // Optional for specific styles
 const AlbumPage = () => {
     const [albums, setAlbums] = useState([]);
     const [error, setError] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/albums')
@@ -18,6 +19,14 @@ const AlbumPage = () => {
             .catch((error) => setError(error.message));
     }, []);
 
+    const handleSearch = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const filteredAlbums = albums.filter((album) =>
+        album.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     if (error) {
         return <p>Error fetching data: {error}</p>;
     }
@@ -25,8 +34,16 @@ const AlbumPage = () => {
     return (
         <div className="container">
             <h2>Album List</h2>
+            <div className="search-bar">
+                <input
+                    type="text"
+                    placeholder="Search albums..."
+                    value={searchTerm}
+                    onChange={handleSearch}
+                />
+            </div>
             <ul>
-                {albums.map((album) => (
+                {filteredAlbums.map((album) => (
                     <li key={album.id}>
                         {album.title}
                     </li>
