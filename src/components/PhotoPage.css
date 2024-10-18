@@ -1,0 +1,37 @@
+/* src/components/PhotoPage.css */
+
+.photo-page-container {
+  padding: 20px;
+}
+
+h2 {
+  color: #28a745;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.photo-item {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.photo-thumbnail {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

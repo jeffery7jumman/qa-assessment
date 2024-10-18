@@ -1,0 +1,41 @@
+/* src/components/LandingPage.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text within the container */
+}
+
+h1 {
+    color: #333; /* Dark text color */
+    font-size: 3rem; /* Larger font size */
+    margin-bottom: 20px; /* Space below the welcome message */
+}
+
+.join-button {
+    padding: 10px 20px; /* Button padding */
+    font-size: 1rem; /* Button text size */
+    color: #fff; /* White text color */
+    background-color: #007bff; /* Blue background */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    width: auto; /* Set width to auto to prevent stretching */
+    min-width: 150px; /* Set a minimum width for the button */
+    text-align: center; /* Center text inside the button */
+}
+
+.join-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

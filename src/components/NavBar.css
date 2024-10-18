@@ -1,0 +1,76 @@
+/* src/components/NavBar.css */
+.navbar {
+    background-color: #333;
+    padding: 6px 20px; /* Thinner padding for a slimmer navbar */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Reduced space between items */
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px; /* Reduced padding for a more compact button */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+    display: inline-block; /* Ensure full button clickability */
+}
+
+.nav-item a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Full button hover effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
+}
+
+/* Logout/Join button styling */
+.nav-logout a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px; /* Reduced padding for logout */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-logout a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Full button hover effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
+}
+
+/* Remove any unnecessary visual containers */
+.nav-item, .nav-logout {
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 6px 15px;
+    }
+
+    .nav-links {
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+
+    .nav-item a, .nav-logout a {
+        font-size: 0.9rem;
+    }
+}

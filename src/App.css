@@ -1,0 +1,19 @@
+/* src/App.css */
+
+.App {
+  text-align: center; /* Keep the text centered for the App component */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh; /* Keep this to allow the header to fill the viewport */
+  display: block; /* Change to block to prevent centering */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* No need for flex properties to center items globally */
