@@ -1,6 +1,7 @@
 /* src/components/HomePage.css */
 .home-container {
     display: flex;
+    flex-direction: column; /* Updated to allow stacking of elements */
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full height of the viewport */
@@ -24,4 +25,19 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.view-all-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.view-all-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

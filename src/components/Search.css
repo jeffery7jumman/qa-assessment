@@ -1,0 +1,32 @@
+/* src/components/Search.css */
+
+.search-container {
+    position: relative; /* Relative positioning for absolute children */
+    margin-top: 10px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.clear-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #999;
+    display: flex;
+    align-items: center;
+}
+
+.clear-button:hover {
+    color: #000; /* Change color on hover */
+}
